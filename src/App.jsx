@@ -7,10 +7,10 @@ import {useState} from "react";
 
 const inputHandle=(inputValue)=>{
     let data;
-    for (let i = 0; i <10000000 ; i++) {
-
+    for (let i = 0; i <10000; i++) {
         data=i;
     }
+    console.log('inputHandle running')
     return inputValue;
 }
 

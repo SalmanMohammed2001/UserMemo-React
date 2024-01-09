@@ -32,6 +32,7 @@ function App() {
 
         <p>{imageUrl}</p>
         <p>{name}</p>
+        <p>{imageData}</p>
         <div></div>
     </div>
   )

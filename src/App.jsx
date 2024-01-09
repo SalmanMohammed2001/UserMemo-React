@@ -1,6 +1,6 @@
 
 import './App.css'
-import {useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 
 
 
@@ -17,10 +17,15 @@ const inputHandle=(inputValue)=>{
 function App() {
     const [imageUrl,setImageUrl]=useState()
     const [name,setName]=useState()
+    const [imageData,setImageData]=useState()
 
     console.log('render')
 
-    const imageData=inputHandle(imageUrl);
+ /*   const imageData=useMemo(()=> inputHandle(imageUrl),[imageUrl]);*/
+    // let imageData=''
+   useEffect(()=>{
+       setImageData(   inputHandle(imageUrl))
+   },[imageUrl]);
 
   return (
     <div>
